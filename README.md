@@ -7,7 +7,7 @@ Data Structures and Algorithms - Self Paced Course of GeeksforGeeks (C++)
  - Mathematics
  - Recursion
  - Array
- - Searchnig
+ - [Searching](https://github.com/tjanhvi/Data-Structure-and-Algorithms/blob/main/Searching/README.md)
  - Sorting
  - Matrix
  - Hashing
