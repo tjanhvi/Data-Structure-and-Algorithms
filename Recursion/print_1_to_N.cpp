@@ -1,20 +1,41 @@
-#include<bits/stdc++.h>
+// { Driver Code Starts
+#include <bits/stdc++.h>
 using namespace std;
 
-// void printNumber(int n){
-//     for(int i = 1; i <= n; i++){
-//         cout << i << " ";
-//     }
-// }
 
-void printNumber(int n){
-    if(n == 0) return;
-    printNumber(n-1);
-    cout << n << " ";
-}
+ // } Driver Code Ends
+class Solution{
+    public:
+    //Complete this function
+    void printNos(int N)
+    {
+        if(N == 0) return;
+        printNos(N-1);
+        cout << N << " ";
+        
+    }
+};
 
-int main(){
-    printNumber(5);
+// { Driver Code Starts.
+/* Driver program to test printNos */
+int main()
+{
+    int T;
     
+    //taking testcases
+    cin>>T;
+    
+    while(T--)
+    {
+        int N;
+        
+        //input N
+        cin>>N;
+        Solution ob;
+        //calling printNos() function
+        ob.printNos(N);
+        cout << "\n";
+    }
     return 0;
 }
+  // } Driver Code Ends
