@@ -15,7 +15,7 @@ void boundary(int arr[r][c]){
     }
     else if(c == 1){
         for(int i=0;i<r;i++){
-            cout << arr[0][i] << " ";
+            cout << arr[i][0] << " ";
         }
     }
     else{
