@@ -25,7 +25,7 @@ Node *deleteEnd(Node *head){
 }
 
 void printlist(Node *head){
-    Node *curr=head;
+    Node *curr = head;
     while(curr!=NULL){
     cout<<curr->data<<" ";
     curr=curr->next;
