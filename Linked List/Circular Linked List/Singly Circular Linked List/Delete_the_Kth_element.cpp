@@ -19,23 +19,7 @@ void printlist(Node *head){
     }while(p!=head);
 }
 
-//Naive method - O(n)
-Node *delHead(Node *head){
-    if(head==NULL)return NULL;
-    if(head->next==head){
-        delete head;
-        return NULL;
-    }
-    Node *curr=head;
-    while(curr->next!=head)
-        curr=curr->next;
-    curr->next=head->next;
-    delete head;
-    return (curr->next);
-}
-
-//Efficient method - O(1)
-Node *delHead(Node *head){
+Node *deleteHead(Node *head){
     if(head==NULL)return NULL;
     if(head->next==head){
         delete head;
@@ -48,6 +32,18 @@ Node *delHead(Node *head){
     return head;
 }
 
+Node *deleteKth(Node *head,int k){
+    if(head==NULL)return head;
+    if(k==1)return deleteHead(head);
+        Node *curr=head;
+    for(int i=0;i<k-2;i++)
+        curr=curr->next;
+    Node *temp=curr->next;
+    curr->next=curr->next->next;
+    delete temp;
+    return head;
+}
+
 int main() 
 { 
 	Node *head=new Node(10);
@@ -55,7 +51,7 @@ int main()
 	head->next->next=new Node(30);
 	head->next->next->next=new Node(40);
 	head->next->next->next->next=head;
-	head=delHead(head);
+	head=deleteKth(head,3);
 	printlist(head);
 	return 0;
 } 
